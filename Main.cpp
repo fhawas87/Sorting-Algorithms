@@ -38,6 +38,36 @@ int main() {
         std::cin >> InputNumbers.at(i);
     }
 
+    // This solution is more effective and transparent 
+
+    // Also much less code
+
+    while (!MapOfFunctions.empty()) {
+
+        for (const auto &Elements : MapOfFunctions) {
+
+            CopyOfInputNumbers = InputNumbers;
+
+            auto Start = std::chrono::high_resolution_clock::now();
+
+            Elements.second(CopyOfInputNumbers);
+
+            auto End = std::chrono::high_resolution_clock::now();
+
+            std::chrono::duration<double> ExecutionTime = End -Start;
+
+            std::cout << "Execution Time : " << ExecutionTime.count() << "\n" << "\n";
+
+            KeyToRemove.push_back(Elements.first);
+            CopyOfInputNumbers.clear();
+        }
+
+        for (const auto &Key : KeyToRemove) {
+
+            MapOfFunctions.erase(Key);
+        }
+    }
+/*
     while (!MapOfFunctions.empty()) {
 
         for (const auto &Elements : MapOfFunctions) {
@@ -172,7 +202,7 @@ int main() {
         }
 
     }
-
+*/
     InputNumbers.clear();
     KeyToRemove.clear();
 
