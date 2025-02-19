@@ -2,6 +2,8 @@
 
 #define SWAPALGORITHM
 
-void XORSwapAlgorithm(auto &FirstElement, auto &SecondElement);
+#include <cstdint>
+
+void XORSwapAlgorithm(int32_t &FirstElement, int32_t &SecondElement);
 
 #endif
