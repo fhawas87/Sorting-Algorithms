@@ -23,7 +23,7 @@ void SelectionSort (std::vector<int32_t> &CopyOfInputNumbers) {
         //CopyOfInputNumbers.at(i) ^= CopyOfInputNumbers.at(MinIndex);
         //CopyOfInputNumbers.at(MinIndex) ^= CopyOfInputNumbers.at(i);
 
-        XORSwapAlgorithm(CopyOfInputNumbers.at(j), CopyOfInputNumbers.at(j + 1));
+        XORSwapAlgorithm(CopyOfInputNumbers.at(MinIndex), CopyOfInputNumbers.at(i));
     }
 
     std::cout << "SelectionSort : ";
