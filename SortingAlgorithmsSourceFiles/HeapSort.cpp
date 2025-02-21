@@ -23,9 +23,7 @@ void HeapifyAlgorithm(std::vector<int32_t> &CopyOfInputNumbers, int HeapSize, in
 
     if (Largest != i) {
 
-        //std::swap(CopyOfInputNumbers.at(i), CopyOfInputNumbers.at(Largest));
-
-        XORSwapAlgorithm(CopyOfInputNumbers.at(i), CopyOfInputNumbers.at(Largest));
+        std::swap(CopyOfInputNumbers.at(i), CopyOfInputNumbers.at(Largest));
 
         HeapifyAlgorithm(CopyOfInputNumbers, HeapSize, Largest);
     }
@@ -42,9 +40,7 @@ void HeapSort (std::vector<int32_t> &CopyOfInputNumbers) {
 
     for (int i = HeapSize - 1; i >= 0; --i) {
 
-        //std::swap(CopyOfInputNumbers.at(0), CopyOfInputNumbers.at(i));
-
-        XORSwapAlgorithm(CopyOfInputNumbers.at(0), CopyOfInputNumbers.at(i));
+        std::swap(CopyOfInputNumbers.at(0), CopyOfInputNumbers.at(i));
 
         HeapifyAlgorithm(CopyOfInputNumbers, i, 0);
     }
