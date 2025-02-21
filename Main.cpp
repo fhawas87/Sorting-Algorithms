@@ -24,6 +24,7 @@ int main() {
     std::vector<int32_t> CopyOfInputNumbers;
     std::vector<size_t> KeyToRemove;
 
+    /*
     int SizeOfInput;
 
     std::cout << "Enter number of elements : ";
@@ -37,6 +38,9 @@ int main() {
 
         std::cin >> InputNumbers.at(i);
     }
+    */
+
+    GetInputNumbersAsString(InputNumbers);
 
     // This solution is more effective and transparent 
 
