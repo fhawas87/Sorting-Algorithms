@@ -20,9 +20,7 @@ int Partition(std::vector<int32_t> &CopyOfInputNumbers, int Low, int High) {
         }
     }
 
-    //std::swap(CopyOfInputNumbers.at(SmallerElement + 1), CopyOfInputNumbers.at(High));
-
-    XORSwapAlgorithm(CopyOfInputNumbers.at(j), CopyOfInputNumbers.at(j + 1));
+    std::swap(CopyOfInputNumbers.at(SmallerElement + 1), CopyOfInputNumbers.at(High));
 
     return (SmallerElement + 1);
 }
