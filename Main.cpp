@@ -5,7 +5,8 @@
 #include <functional>
 #include <chrono>
 
-#include "SortingAlgorithmsSort.h"
+#include "SortingAlgorithmsSourceFiles/SortingAlgorithmsSort.h"
+#include "SortingAlgorithmsSourceFiles/InputConverter.h"
 
 int main() {
 
